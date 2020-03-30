@@ -32,7 +32,7 @@ class PocketProvider {
 
 			return undefined
 		});
-		return new PocketCall(this.iconChainID, this.url, body, converter, this.pocketInstance, this.pocketAAT);
+		return new PocketCall(this.iconChainID, this.url, body, converter, this.pocketInstance, this.pocketAAT)
 	}
 }
 

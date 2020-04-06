@@ -25,7 +25,7 @@ class PocketCall {
 	}
 
 	execute() {
-		return this.callAsync();
+		return this.callAsync()
 	}
 
 	async callAsync() {
@@ -43,7 +43,11 @@ class PocketCall {
                 console.log("Relay error:", relayResponse.message)
                 throw new Error(relayResponse.message)
             }
-            return JSON.parse(relayResponse.response)
+            if (relayResponse.payload !== 'undefined') {
+                return JSON.parse(relayResponse.payload)
+            } else {
+                throw new Error("Relay payload is undefined")
+            }
         } catch(e) {
 			if (typeof e.error === 'object') {
 				const rpcError = new RpcError("0", e.error.message)

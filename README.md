@@ -22,8 +22,9 @@ Connect any ICON application to Pocket's decentralized network of data providers
     <a href="https://github.com/pokt-network/icon-pocket-provider/pulls"><img src="https://img.shields.io/github/issues-pr/pokt-network/icon-pocket-provider.svg"/></a>
     <a href="https://github.com/pokt-network/icon-pocket-provider/issues"><img src="https://img.shields.io/github/issues-closed/pokt-network/icon-pocket-provider.svg"/></a>
 </div>
+<br />
 
-The ICON Pocket Provider is a drop-in replacement for the [ICON SDK for JavaScript](https://github.com/icon-project/icon-sdk-js). By replacing the default provider with the Pocket Network, your ICON app is able to access a decentralized, scalable array of data providers at a lower cost than commercial alternatives.
+The ICON Pocket Provider is a drop-in replacement for the IconProvider in the [ICON SDK for JavaScript](https://github.com/icon-project/icon-sdk-js). By replacing the default provider with the Pocket Network, your ICON app is able to access a decentralized, scalable array of data providers at a lower cost than commercial alternatives.
 
 If your application connects to the ICON blockchains, you can use Pocket to increase decentralization and lower infrastructure costs!
 

@@ -1,76 +1,72 @@
+
 <div align="center">
   <a href="https://www.pokt.network">
-    <img src="https://pokt.network/wp-content/uploads/2018/12/Logo-488x228-px.png" alt="Pocket Network logo" width="340"/>
+    <img src="https://user-images.githubusercontent.com/16605170/74199287-94f17680-4c18-11ea-9de2-b094fab91431.png" alt="Pocket Network logo" width="340"/>
   </a>
 </div>
 
-# Project Title
+# Pocket Provider for ICON Network
 
-One sentence summary of project
+Connect any ICON application to Pocket's decentralized network of data providers to read and write data to all of the ICON blockchains.
+
 <div>
-  <a  href="https://godoc.org/github.com/pokt-network/pocket-core"><img src="https://img.shields.io/badge/godoc-reference-blue.svg"/></a>
-  <a  href="https://goreportcard.com/report/github.com/pokt-network/pocket-core"><img src="https://goreportcard.com/badge/github.com/pokt-network/pocket-core"/></a>
-  <a href="https://golang.org"><img  src="https://img.shields.io/badge/golang-v1.11-red.svg"/></a>
-  <a  href="https://github.com/tools/godep" ><img src="https://img.shields.io/badge/godep-dependency-71a3d9.svg"/></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference"><img src="https://img.shields.io/badge/js-reference-yellow.svg"/></a>
 </div>
 
 ## Overview
 <div>
-    <a  href="https://github.com/pokt-network/pocket-core/releases"><img src="https://img.shields.io/github/release-pre/pokt-network/pocket-core.svg"/></a>
-    <a href="https://circleci.com/gh/pokt-network/pocket-core/tree/staging"><img src="https://circleci.com/gh/pokt-network/pocket-core/tree/staging.svg?style=svg"/></a>
-    <a  href="https://github.com/pokt-network/pocket-core/pulse"><img src="https://img.shields.io/github/contributors/pokt-network/pocket-core.svg"/></a>
+    <a  href="https://github.com/pokt-network/icon-pocket-provider/releases"><img src="https://img.shields.io/github/release-pre/pokt-network/icon-pocket-provider.svg"/></a>
+    <a  href="https://github.com/pokt-network/pocket-core/pulse"><img src="https://img.shields.io/github/contributors/pokt-network/icon-pocket-provider.svg"/></a>
     <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg"/></a>
-    <a href="https://github.com/pokt-network/pocket-core/pulse"><img src="https://img.shields.io/github/last-commit/pokt-network/pocket-core.svg"/></a>
-    <a href="https://github.com/pokt-network/pocket-core/pulls"><img src="https://img.shields.io/github/issues-pr/pokt-network/pocket-core.svg"/></a>
-    <a href="https://github.com/pokt-network/pocket-core/releases"><img src="https://img.shields.io/badge/platform-linux%20%7C%20windows%20%7C%20macos-pink.svg"/></a>
-    <a href="https://github.com/pokt-network/pocket-core/issues"><img src="https://img.shields.io/github/issues-closed/pokt-network/pocket-core.svg"/></a>
+    <a href="https://github.com/pokt-network/icon-pocket-provider/pulse"><img src="https://img.shields.io/github/last-commit/pokt-network/icon-pocket-provider.svg"/></a>
+    <a href="https://github.com/pokt-network/icon-pocket-provider/pulls"><img src="https://img.shields.io/github/issues-pr/pokt-network/icon-pocket-provider.svg"/></a>
+    <a href="https://github.com/pokt-network/icon-pocket-provider/issues"><img src="https://img.shields.io/github/issues-closed/pokt-network/icon-pocket-provider.svg"/></a>
 </div>
 
-Full Description
+The ICON Pocket Provider is a drop-in replacement for the [ICON SDK for JavaScript](https://github.com/icon-project/icon-sdk-js). By replacing the default provider with the Pocket Network, your ICON app is able to access a decentralized, scalable array of data providers at a lower cost than commercial alternatives.
+
+If your application connects to the ICON blockchains, you can use Pocket to increase decentralization and lower infrastructure costs!
+
+For more information on Pocket, please visit [pokt.network](https://pokt.network/).
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+Once you've prepared the prerequisites to using Pocket, it is simple to use to access any ICON blockchain.
 
 ### Example usage
 
 ```
-The most basic example of how you would use the project
+// create the Pocket provider
+const pocketProvider = new PocketLib.PocketProvider(
+    iconChainID, 
+    iconAPIPath, 
+    pocketInstance, 
+    pocketAAT
+);
+
+// inject the pocketProvider into IconService
+const iconService = new IconService(pocketProvider);
 ```
+
+Please see [this example integration](https://github.com/pokt-network/integration-icon/blob/staging/src/index.js) for a live running example of an ICON application using Pocket.
 
 ### Installation
 
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+Pocket Network libraries are hosted on NPM:
 
 ```
-Give the step
+npm install --save @pokt-network/pocket-js
+npm install --save icon-sdk-js
+npm install --save js-sha256
 ```
-
-And repeat
-
-```
-until finished
-```
-
-End with an example of getting data out of the system or using it for a demo
 
 ## Documentation
 
-Full usage and options or a link to the docs.pokt.network site
-
-## Running the tests
-
-Explain how to run the automated tests
-
-```
-Give an example
-```
+Please see [docs.pokt.network](https://docs.pokt.network/docs/connect-to-icon) for complete documentation.
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/pokt-network/repo-template/blob/master/CONTRIBUTING.md) for details on contributions and the process of submitting pull requests.
+Please read [CONTRIBUTING.md](https://github.com/pokt-network/icon-pocket-provider/blob/master/CONTRIBUTING.md) for details on contributions and the process of submitting pull requests.
 
 ## Support & Contact
 

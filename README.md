@@ -40,7 +40,6 @@ Once you've prepared the prerequisites to using Pocket, it is simple to use to a
 // create the Pocket provider
 const pocketProvider = new PocketLib.PocketProvider(
     iconChainID, 
-    iconAPIPath, 
     pocketInstance, 
     pocketAAT
 );
